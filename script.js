@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
       skills_sub: 'Teknologi dan perangkat lunak standar industri yang saya gunakan.',
  
       projects_title      : 'Proyek Unggulan',
-      projects_sub        : 'Studi kasus dan proyek aplikasi digital yang telah saya kembangkan.',
-      proj_mooduit_desc   : 'MOODUIT adalah aplikasi pengatur keuangan inovatif yang ditenagai oleh kecerdasan buatan (AI). Aplikasi ini dirancang untuk memudahkan manajemen arus kas, analisis fundamental, serta membantu pengguna mengambil keputusan finansial yang lebih cerdas dan terstruktur.',
-      btn_view            : 'Lihat Studi Kasus',
+      proj_mooduit_desc   : 'MOODUIT adalah aplikasi pengatur keuangan inovatif yang ditenagai oleh kecerdasan buatan (AI) dan dibangun menggunakan React. Aplikasi ini dirancang untuk memudahkan manajemen arus kas dan analisis fundamental secara cerdas.',
+      proj_cuantrack_desc : 'CuanTrack adalah aplikasi web manajemen keuangan dan penganggaran. Dibangun secara native menggunakan PHP murni, aplikasi ini berfokus pada pencatatan data arus kas yang akurat, cepat, dan aman tanpa integrasi AI.',
+      btn_view            : 'Lihat Proyek',
  
       gallery_title: 'Sertifikat & Galeri',
       gallery_sub  : 'Kumpulan sertifikat dan validasi keahlian teknis saya.',
@@ -143,9 +143,9 @@ document.addEventListener('DOMContentLoaded', function () {
       skills_sub: 'Industry-standard technologies and software I utilize.',
  
       projects_title      : 'Featured Projects',
-      projects_sub        : 'Case studies and digital application projects I have developed.',
-      proj_mooduit_desc   : 'MOODUIT is an innovative financial management application powered by artificial intelligence (AI). This app is designed to streamline cash flow management, facilitate fundamental analysis, and help users make smarter, well-structured financial decisions.',
-      btn_view            : 'View Case Study',
+      proj_mooduit_desc   : 'MOODUIT is an innovative financial management application powered by artificial intelligence (AI) and built using React. This app is designed to streamline cash flow management and fundamental analysis smartly.',
+      proj_cuantrack_desc : 'CuanTrack is a financial management and budgeting web application. Built natively using pure PHP, this app focuses on accurate, fast, and secure cash flow tracking without AI integration.',
+      btn_view            : 'View Project',
  
       gallery_title: 'Certificates & Gallery',
       gallery_sub  : 'A collection of certificates and technical skill validations.',
