@@ -38,22 +38,32 @@
   </div>
  
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg fixed-top py-3" id="main-nav">
+  <nav class="navbar navbar-expand-lg fixed-top py-2 py-lg-3" id="main-nav">
     <div class="container">
+      
+      <!-- 1. Logo (Kiri) -->
       <a class="navbar-brand fw-bold" href="#home">Arul Satriaji</a>
       
-      <div class="d-flex align-items-center gap-2 ms-auto me-3 order-lg-3">
-        <button id="langToggle" class="btn btn-sm btn-outline-primary fw-bold" style="width: 45px;">EN</button>
-        <button id="themeToggle" class="btn btn-sm btn-outline-secondary rounded-circle"
-                style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;">
-          <i class="bi bi-moon-fill" id="themeIcon"></i>
+      <!-- 2. Kelompok Kanan (Tombol & Hamburger disatukan agar sejajar di HP) -->
+      <div class="d-flex align-items-center gap-2 ms-auto order-lg-3">
+        
+        <!-- Tombol EN & Dark Mode -->
+        <div class="d-flex gap-2 me-1 me-lg-2">
+          <button id="langToggle" class="btn btn-sm btn-outline-primary fw-bold" style="width: 45px;">EN</button>
+          <button id="themeToggle" class="btn btn-sm btn-outline-secondary rounded-circle"
+                  style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;">
+            <i class="bi bi-moon-fill" id="themeIcon"></i>
+          </button>
+        </div>
+        
+        <!-- Hamburger Menu (Dibuat lebih tipis tanpa border) -->
+        <button class="navbar-toggler p-1 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Open navigation">
+          <span class="navbar-toggler-icon" style="width: 24px; height: 24px;"></span>
         </button>
+        
       </div>
  
-      <button class="navbar-toggler order-lg-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Open navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
- 
+      <!-- 3. Menu Desktop (Tengah/Kanan) -->
       <div class="collapse navbar-collapse justify-content-end order-lg-2 me-lg-4">
         <ul class="navbar-nav gap-lg-2">
           <li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav_home">Beranda</a></li>
@@ -65,6 +75,7 @@
           <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Kontak</a></li>
         </ul>
       </div>
+      
     </div>
   </nav>
  
@@ -246,7 +257,7 @@
               <div class="project-tags mb-4">
                 <span>React</span><span>AI Integration</span><span>Front-End</span><span>UI/UX</span>
               </div>
-              <a href="https://mooduit.vercel.app/" class="btn btn-primary mt-auto align-self-start" data-i18n="btn_view">Lihat Proyek</a>
+              <a href="https://mooduit.arulsatriaji.dev/" class="btn btn-primary mt-auto align-self-start" data-i18n="btn_view">Lihat Proyek</a>
             </div>
           </div>
         </div>
