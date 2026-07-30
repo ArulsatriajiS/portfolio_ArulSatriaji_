@@ -457,3 +457,48 @@ section {
     font-size: 90px;
   }
 }
+
+/* Mobile (<768px) */
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 42px;
+  }
+ 
+  .section-padding {
+    padding: 70px 0;
+  }
+ 
+  /* Memaksa grid kontak menjadi 2 kolom di tablet/HP */
+  .contact-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+/* Small Mobile (<480px) */
+@media (max-width: 480px) {
+  /* Penyesuaian jarak kontak agar sejajar pas di HP sempit */
+  .contact-card {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px; 
+    gap: 12px;
+  }
+  
+  /* Mengecilkan jarak di dalam tombol kontak */
+  .contact-link {
+    padding: 16px 10px;
+  }
+  
+  /* Mengecilkan sedikit ikon kontak */
+  .contact-link i {
+    font-size: 24px;
+  }
+ 
+  .profile-img {
+    width  : 150px;
+    height : 150px;
+  }
+ 
+  .profile-img i {
+    font-size: 90px;
+  }
+}
