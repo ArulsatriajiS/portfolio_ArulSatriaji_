@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arul Satriaji | Digital Partner & Web Developer</title>
+ 
+  <!-- ===== EXTERNAL DEPENDENCIES ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+ 
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+ 
+<body data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="80" tabindex="0">
+ 
+  <!-- OFFCANVAS MENU (Mobile) -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title fw-bold">Arul Satriaji</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="#home" data-i18n="nav_home">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#about" data-i18n="nav_about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#services" data-i18n="nav_services">Layanan</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#skills" data-i18n="nav_skills">Keahlian</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#projects" data-i18n="nav_projects">Proyek</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#gallery" data-i18n="nav_gallery">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contact" data-i18n="nav_contact">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+ 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top py-3" id="main-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Arul Satriaji</a>
+      
+      <div class="d-flex align-items-center gap-2 ms-auto me-3 order-lg-3">
+        <button id="langToggle" class="btn btn-sm btn-outline-primary fw-bold" style="width: 45px;">EN</button>
+        <button id="themeToggle" class="btn btn-sm btn-outline-secondary rounded-circle"
+                style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;">
+          <i class="bi bi-moon-fill" id="themeIcon"></i>
+        </button>
+      </div>
+ 
+      <button class="navbar-toggler order-lg-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Open navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+ 
+      <div class="collapse navbar-collapse justify-content-end order-lg-2 me-lg-4">
+        <ul class="navbar-nav gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav_home">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav_services">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav_skills">Keahlian</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery" data-i18n="nav_gallery">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- SECTION: HERO -->
+  <section id="home" class="hero-section d-flex align-items-center min-vh-100">
+    <div class="container">
+      <div class="row align-items-center justify-content-between g-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <p class="hero-badge animate-fade-in-up" data-i18n="hero_badge">Mitra Digital Bisnis Anda</p>
+          <h1 class="display-3 fw-bold animate-fade-in-up delay-1">
+            <span data-i18n="hero_hello">Halo, Saya</span>
+            <span class="text-primary">Arul Satriaji</span>
+          </h1>
+          <p class="lead mt-3 mb-3 animate-fade-in-up delay-2" data-i18n="hero_role">
+            Fullstack Web Developer & Digital Partner
+          </p>
+          <p class="hero-desc animate-fade-in-up delay-3" data-i18n="hero_desc">
+            Saya membantu UMKM dan pelaku bisnis beradaptasi di era digital melalui pembuatan website yang modern, responsif, serta manajemen sosial media yang dirancang khusus untuk meningkatkan interaksi dan pertumbuhan audiens.
+          </p>
+          <div class="d-flex gap-3 justify-content-center justify-content-lg-start mt-4 animate-fade-in-up delay-4">
+            <a href="#services" class="btn btn-primary px-4" data-i18n="btn_work">Solusi Bisnis</a>
+            <a href="#contact" class="btn btn-outline-primary px-4" data-i18n="btn_contact">Konsultasi Gratis</a>
+          </div>
+        </div>
+ 
+        <div class="col-lg-4 text-center animate-fade-in-right delay-3">
+          <div class="profile-card">
+            <div class="profile-img overflow-hidden">
+              <i class="bi bi-person-circle d-none"></i>
+              <img src="foto saya.jpeg" alt="Arul Satriaji" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.previousElementSibling.classList.remove('d-none');" />
+            </div>
+            <h5 class="mt-4 mb-1">Arul Satriaji</h5>
+            <p class="mb-0 text-muted" data-i18n="profile_role">Fullstack Web Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SECTION: ABOUT -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 animate-fade-in-left">
+          <div class="section-card">
+            <h2 data-i18n="nav_about">Tentang Saya</h2>
+            <p data-i18n="about_p1">
+              Sebagai pengembang perangkat lunak dengan latar belakang Teknik Informatika, saya menggabungkan pemahaman teknis dengan kreativitas visual. Spesialisasi saya berada di Front-End Development dan implementasi Artificial Intelligence (AI) untuk memberikan solusi digital cerdas bagi bisnis.
+            </p>
+            <p class="mb-0" data-i18n="about_p2">
+              Tujuan saya bukan sekadar menulis barisan kode, tetapi membangun aset digital—baik berupa website fungsional maupun kehadiran organik di sosial media—yang bernilai guna tinggi dan mendatangkan hasil nyata bagi klien dan audiens mereka.
+            </p>
+          </div>
+        </div>
+ 
+        <div class="col-lg-7 animate-fade-in-right">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-mortarboard"></i>
+                <h5 data-i18n="edu_title">Pendidikan</h5>
+                <p data-i18n="edu_desc">S1 Teknik Informatika, Universitas Hamzanwadi</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-bullseye"></i>
+                <h5 data-i18n="focus_title">Fokus</h5>
+                <p data-i18n="focus_desc">Digitalisasi UMKM & Web Development</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-laptop"></i>
+                <h5 data-i18n="tools_title">Alat Kerja</h5>
+                <p data-i18n="tools_desc">VS Code, Figma, Bootstrap, Platform AI, Canva</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-rocket-takeoff"></i>
+                <h5 data-i18n="goal_title">Tujuan</h5>
+                <p data-i18n="goal_desc">Meningkatkan skala bisnis klien ke ranah digital</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: SERVICES (LAYANAN) -->
+  <section id="services" class="section-padding bg-soft">
+    <div class="container">
+      <div class="text-center mb-5 animate-fade-in-up">
+        <h2 data-i18n="nav_services">Layanan Saya</h2>
+        <p class="section-subtitle" data-i18n="services_sub">
+          Solusi digital komprehensif yang dirancang khusus untuk membantu bisnis dan UMKM Anda berkembang secara online.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 animate-fade-in-up delay-1">
+          <div class="info-box text-center text-lg-start">
+            <i class="bi bi-globe"></i>
+            <h5 data-i18n="srv_web_title">Pembuatan Website UMKM</h5>
+            <p data-i18n="srv_web_desc">Pengembangan website company profile dan toko online yang modern, responsif di semua perangkat, cepat, dan dioptimasi.</p>
+          </div>
+        </div>
+        <div class="col-md-4 animate-fade-in-up delay-2">
+          <div class="info-box text-center text-lg-start">
+            <i class="bi bi-phone"></i>
+            <h5 data-i18n="srv_sosmed_title">Manajemen Sosial Media</h5>
+            <p data-i18n="srv_sosmed_desc">Pembuatan strategi konten, desain visual, hingga kurasi video pendek (Reels/TikTok) untuk meningkatkan konversi audiens.</p>
+          </div>
+        </div>
+        <div class="col-md-4 animate-fade-in-up delay-3">
+          <div class="info-box text-center text-lg-start">
+            <i class="bi bi-palette"></i>
+            <h5 data-i18n="srv_uiux_title">Desain UI/UX</h5>
+            <p data-i18n="srv_uiux_desc">Pembuatan purwarupa (prototyping) aplikasi di Figma untuk menciptakan pengalaman pengguna (user experience) yang intuitif.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SECTION: SKILLS -->
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5 animate-fade-in-up">
+        <h2 data-i18n="nav_skills">Keahlian Teknis</h2>
+        <p class="section-subtitle" data-i18n="skills_sub">
+          Teknologi dan perangkat lunak standar industri yang saya gunakan.
+        </p>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-3 animate-fade-in-up delay-1">
+        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="24" height="24"><span>Figma</span></div>
+        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="24" height="24"><span>PHP</span></div>
+        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="24" height="24"><span>HTML</span></div>
+        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="24" height="24"><span>CSS</span></div>
+        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="24" height="24"><span>JavaScript</span></div>
+        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="24" height="24"><span>Bootstrap</span></div>
+        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="24" height="24"><span>Python</span></div>
+        <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="24" height="24"><span>Git &amp; GitHub</span></div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SECTION: PROJECTS -->
+  <section id="projects" class="section-padding bg-soft">
+    <div class="container">
+      <div class="text-center mb-5 animate-fade-in-up">
+        <h2 data-i18n="projects_title">Proyek Unggulan</h2>
+        <p class="section-subtitle" data-i18n="projects_sub">
+          Studi kasus dan proyek aplikasi digital yang telah saya kembangkan.
+        </p>
+      </div>
+ 
+      <div class="row justify-content-center g-4">
+        <!-- PROJECT 1: MOODUIT -->
+        <div class="col-lg-8 animate-fade-in-up delay-1">
+          <div class="project-card flex-column flex-md-row h-100">
+            <div class="project-icon overflow-hidden bg-transparent border" style="width: 250px; height: 250px; flex-shrink: 0; border-radius: 20px;">
+              <img src="Logo_mooduit.png" alt="Logo MOODUIT" style="width: 100%; height: 100%; object-fit: contain; padding: 24px;" />
+            </div>
+            <div class="d-flex flex-column flex-grow-1 mt-3 mt-md-0">
+              <h4>MOODUIT</h4>
+              <p data-i18n="proj_mooduit_desc" class="flex-grow-1">
+                MOODUIT adalah aplikasi pengatur keuangan inovatif yang ditenagai oleh kecerdasan buatan (AI). Aplikasi ini dirancang untuk memudahkan manajemen arus kas, analisis portofolio fundamental, serta membantu pengguna mengambil keputusan finansial yang lebih cerdas dan terstruktur.
+              </p>
+              <div class="project-tags mb-4">
+                <span>AI Integration</span><span>Front-End</span><span>UI/UX</span><span>Data Analysis</span>
+              </div>
+              <a href="https://mooduit.vercel.app/" class="btn btn-primary mt-auto align-self-start" data-i18n="btn_view">Lihat Studi Kasus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SECTION: GALLERY -->
+  <section id="gallery" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5 animate-fade-in-up">
+        <h2 data-i18n="gallery_title">Sertifikat & Galeri</h2>
+        <p class="section-subtitle" data-i18n="gallery_sub">
+          Kumpulan sertifikat dan validasi keahlian teknis saya.
+        </p>
+      </div>
+      
+      <div class="row justify-content-center g-4">
+        
+        <!-- Sertifikat 1 -->
+        <div class="col-md-5 animate-fade-in-up delay-1">
+          <!-- Menambahkan bg-white agar pinggiran sertifikat terlihat rapi di dark mode -->
+          <div class="gallery-item overflow-hidden rounded-4 shadow-sm border border-light bg-white d-flex align-items-center justify-content-center">
+            <img src="1.png" alt="Certificate Vibe Coding" class="img-fluid w-100" />
+          </div>
+        </div>
+        
+        <!-- Sertifikat 2 -->
+        <div class="col-md-5 animate-fade-in-up delay-2">
+          <!-- Menambahkan bg-white agar pinggiran sertifikat terlihat rapi di dark mode -->
+          <div class="gallery-item overflow-hidden rounded-4 shadow-sm border border-light bg-white d-flex align-items-center justify-content-center">
+            <img src="2.png" alt="Certificate AI Fluency" class="img-fluid w-100" />
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SECTION: CONTACT -->
+  <section id="contact" class="section-padding bg-soft">
+    <div class="container">
+      <div class="text-center mb-5 animate-fade-in-up">
+        <h2 data-i18n="nav_contact">Mari Bekerja Sama</h2>
+        <p class="section-subtitle" data-i18n="contact_sub">
+          Siap mendigitalkan bisnis Anda? Jangan ragu untuk menghubungi saya untuk konsultasi.
+        </p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-card animate-fade-in-up delay-1">
+            <a href="mailto:arulsatriaji5@gmail.com" class="contact-link">
+              <i class="bi bi-envelope"></i><span>Email</span>
+            </a>
+            <a href="https://github.com/arulsatriaji5" target="_blank" rel="noopener" class="contact-link">
+              <i class="bi bi-github"></i><span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/arul-satriaji-1696a23a1" target="_blank" rel="noopener" class="contact-link">
+              <i class="bi bi-linkedin"></i><span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/arul_satriaji_/" target="_blank" rel="noopener" class="contact-link">
+              <i class="bi bi-instagram"></i><span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer class="footer py-4 text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Arul Satriaji. Built for Business Growth.</p>
+    </div>
+  </footer>
+ 
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

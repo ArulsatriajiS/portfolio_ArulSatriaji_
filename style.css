@@ -1,0 +1,459 @@
+/* ============================================================
+   STYLE.CSS — Arul Satriaji Portfolio
+   Struktur:
+     1. CSS Variables (Light & Dark Mode)
+     2. Base / Reset
+     3. Navbar
+     4. Hero Section
+     5. Section Umum
+     6. Cards (Section, Info, Project, Contact)
+     7. Skill Badges
+     8. Gallery
+     9. Footer
+    10. Animasi Scroll
+    11. Responsive (Breakpoints)
+============================================================ */
+ 
+ 
+/* ============================================================
+   1. CSS VARIABLES
+============================================================ */
+ 
+:root {
+  --primary-color : #0d6efd;
+  --dark-color    : #111827;
+  --text-color    : #222222;
+  --muted-color   : #6b7280;
+  --soft-bg       : #f8fafc;
+  --card-bg       : #ffffff;
+  --border-color  : #e5e7eb;
+}
+ 
+/* Override variabel untuk Dark Mode */
+[data-bs-theme="dark"] {
+  --primary-color : #3b82f6;
+  --dark-color    : #f9fafb;
+  --text-color    : #e5e7eb;
+  --muted-color   : #9ca3af;
+  --soft-bg       : #111827;
+  --card-bg       : #1f2937;
+  --border-color  : #374151;
+  background-color: #030712;
+}
+ 
+ 
+/* ============================================================
+   2. BASE / RESET
+============================================================ */
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+html {
+  scroll-behavior: smooth;
+}
+ 
+body {
+  font-family      : 'Inter', sans-serif;
+  line-height      : 1.6;
+  color            : var(--text-color);
+  overflow-x       : hidden;
+  background-color : var(--card-bg);
+  transition       : background-color 0.3s ease, color 0.3s ease;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+  font-weight : 700;
+  color       : var(--dark-color);
+}
+ 
+/* Offset scroll agar konten tidak tertutup navbar */
+section {
+  scroll-margin-top: 90px;
+}
+ 
+ 
+/* ============================================================
+   3. NAVBAR
+============================================================ */
+ 
+.navbar {
+  background-color   : rgba(255, 255, 255, 0.82);
+  backdrop-filter    : blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom      : 1px solid rgba(229, 231, 235, 0.8);
+  transition         : all 0.3s ease;
+}
+ 
+/* Dark mode override untuk navbar */
+[data-bs-theme="dark"] .navbar {
+  background-color : rgba(17, 24, 39, 0.85);
+  border-bottom    : 1px solid rgba(55, 65, 81, 0.8);
+}
+ 
+.navbar-brand {
+  color: var(--dark-color);
+}
+ 
+.navbar .nav-link {
+  color       : var(--muted-color);
+  font-weight : 500;
+  transition  : color 0.3s ease;
+}
+ 
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--primary-color);
+}
+ 
+ 
+/* ============================================================
+   4. HERO SECTION
+============================================================ */
+ 
+.hero-section {
+  padding-top: 90px; /* kompensasi tinggi navbar */
+}
+ 
+/* Badge kecil di atas judul hero */
+.hero-badge {
+  display          : inline-block;
+  padding          : 8px 16px;
+  margin-bottom    : 18px;
+  border-radius    : 999px;
+  background-color : rgba(13, 110, 253, 0.1);
+  color            : var(--primary-color);
+  font-weight      : 600;
+  font-size        : 14px;
+}
+ 
+.hero-desc {
+  max-width  : 620px;
+  color      : var(--muted-color);
+  font-size  : 17px;
+}
+ 
+/* Rata kiri di desktop, tengah di mobile */
+.text-lg-start .hero-desc {
+  margin-left: 0;
+}
+ 
+/* Kartu foto profil */
+.profile-card {
+  padding          : 32px;
+  border-radius    : 28px;
+  background-color : var(--card-bg);
+  box-shadow       : 0 20px 60px rgba(15, 23, 42, 0.08);
+  border           : 1px solid var(--border-color);
+}
+ 
+.profile-img {
+  width            : 190px;
+  height           : 190px;
+  margin           : 0 auto;
+  border-radius    : 50%;
+  background       : linear-gradient(135deg, #e0ecff, var(--card-bg));
+  display          : flex;
+  align-items      : center;
+  justify-content  : center;
+}
+ 
+/* Ikon fallback jika foto gagal dimuat */
+.profile-img i {
+  font-size : 110px;
+  color     : var(--primary-color);
+}
+ 
+ 
+/* ============================================================
+   5. SECTION UMUM
+============================================================ */
+ 
+.section-padding {
+  padding: 100px 0;
+}
+ 
+.bg-soft {
+  background-color : var(--soft-bg);
+  transition       : background-color 0.3s ease;
+}
+ 
+.section-subtitle {
+  color      : var(--muted-color);
+  max-width  : 520px;
+  margin     : 0 auto;
+}
+ 
+ 
+/* ============================================================
+   6. CARDS (Section, Info Box, Project, Contact)
+============================================================ */
+ 
+/* --- Base card style (digunakan bersama) --- */
+.section-card,
+.info-box,
+.project-card,
+.contact-card {
+  background-color : var(--card-bg);
+  border           : 1px solid var(--border-color);
+  border-radius    : 24px;
+  box-shadow       : 0 14px 40px rgba(15, 23, 42, 0.06);
+  transition       : background-color 0.3s ease, border-color 0.3s ease;
+}
+ 
+/* --- Section Card (About) --- */
+.section-card {
+  padding: 36px;
+}
+ 
+.section-card p {
+  color: var(--muted-color);
+}
+ 
+/* --- Info Box (Grid 2x2 di About) --- */
+.info-box {
+  padding    : 28px;
+  height     : 100%;
+  transition : transform 0.3s ease, background-color 0.3s ease;
+}
+ 
+.info-box:hover {
+  transform: translateY(-6px);
+}
+ 
+.info-box i {
+  font-size     : 32px;
+  color         : var(--primary-color);
+  margin-bottom : 12px;
+}
+ 
+.info-box p {
+  color      : var(--muted-color);
+  margin-bottom: 0;
+}
+ 
+/* --- Project Card --- */
+.project-card {
+  padding : 36px;
+  display : flex;
+  gap     : 28px;
+  align-items: flex-start;
+}
+ 
+.project-icon {
+  border-radius    : 22px;
+  display          : flex;
+  align-items      : center;
+  justify-content  : center;
+}
+ 
+.project-card p {
+  color: var(--muted-color);
+}
+ 
+/* Tag teknologi di dalam project card */
+.project-tags {
+  display   : flex;
+  flex-wrap : wrap;
+  gap       : 10px;
+}
+ 
+.project-tags span {
+  padding          : 7px 14px;
+  border-radius    : 999px;
+  background-color : #f1f5f9;
+  color            : #334155;
+  font-size        : 14px;
+  font-weight      : 500;
+  transition       : background-color 0.3s ease;
+}
+ 
+/* Dark mode override untuk project tags */
+[data-bs-theme="dark"] .project-tags span {
+  background-color : #374151;
+  color            : #e5e7eb;
+}
+ 
+/* --- Contact Card --- */
+.contact-card {
+  padding               : 24px;
+  display               : grid;
+  grid-template-columns : repeat(4, 1fr);
+  gap                   : 16px;
+}
+ 
+.contact-link {
+  padding          : 22px 16px;
+  border-radius    : 18px;
+  text-decoration  : none;
+  color            : var(--dark-color);
+  background-color : var(--soft-bg);
+  display          : flex;
+  flex-direction   : column;
+  align-items      : center;
+  gap              : 8px;
+  transition       : all 0.3s ease;
+}
+ 
+.contact-link:hover {
+  background-color : var(--primary-color);
+  color            : #ffffff;
+  transform        : translateY(-5px);
+}
+ 
+.contact-link i {
+  font-size: 30px;
+}
+ 
+/* Dark mode override untuk skill badge & contact link */
+[data-bs-theme="dark"] .skill-badge,
+[data-bs-theme="dark"] .contact-link {
+  background-color : #1f2937;
+  border           : 1px solid var(--border-color);
+  color            : var(--text-color);
+}
+ 
+[data-bs-theme="dark"] .skill-badge:hover,
+[data-bs-theme="dark"] .contact-link:hover {
+  background-color: #374151;
+}
+ 
+ 
+/* ============================================================
+   7. SKILL BADGES
+============================================================ */
+ 
+.skill-badge {
+  display          : flex;
+  align-items      : center;
+  gap              : 12px;
+  padding          : 12px 24px;
+  background-color : var(--soft-bg);
+  border-radius    : 12px;
+  font-weight      : 600;
+  color            : var(--text-color);
+  transition       : all 0.3s ease;
+  cursor           : default;
+}
+ 
+.skill-badge:hover {
+  transform        : translateY(-4px);
+  background-color : var(--card-bg);
+  box-shadow       : 0 10px 20px rgba(15, 23, 42, 0.08);
+}
+ 
+ 
+/* ============================================================
+   8. GALLERY
+============================================================ */
+ 
+/* Efek zoom saat hover pada gambar galeri */
+.gallery-item img {
+  transition: transform 0.4s ease-in-out;
+}
+ 
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+ 
+ 
+/* ============================================================
+   9. FOOTER
+============================================================ */
+ 
+.footer {
+  border-top : 1px solid var(--border-color);
+  color      : var(--muted-color);
+}
+ 
+ 
+/* ============================================================
+  10. ANIMASI SCROLL
+      Elemen mulai tersembunyi (opacity: 0) lalu muncul
+      saat masuk viewport (kelas .animated ditambahkan via JS)
+============================================================ */
+ 
+.animate-fade-in-up,
+.animate-fade-in-left,
+.animate-fade-in-right {
+  opacity    : 0;
+  transition : opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+ 
+.animate-fade-in-up    { transform: translateY(24px); }
+.animate-fade-in-left  { transform: translateX(-24px); }
+.animate-fade-in-right { transform: translateX(24px); }
+ 
+/* State akhir setelah animasi dijalankan */
+.animated {
+  opacity   : 1;
+  transform : translate(0, 0);
+}
+ 
+/* Delay bertingkat untuk animasi stagger */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+ 
+ 
+/* ============================================================
+  11. RESPONSIVE
+============================================================ */
+ 
+/* Tablet & Mobile (<992px) */
+@media (max-width: 991px) {
+  .hero-section {
+    text-align  : center;
+    padding-top : 120px;
+  }
+ 
+  .hero-desc {
+    margin: 0 auto;
+  }
+ 
+  /* Project card berubah dari row menjadi kolom */
+  .project-card {
+    flex-direction: column;
+  }
+ 
+  .project-icon {
+    width    : 100% !important;
+    max-width: 280px;
+    margin   : 0 auto;
+  }
+}
+ 
+/* Mobile (<768px) */
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 42px;
+  }
+ 
+  .section-padding {
+    padding: 70px 0;
+  }
+ 
+  /* Grid contact berubah dari 4 kolom menjadi 2 kolom */
+  .contact-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+/* Small Mobile (<480px) */
+@media (max-width: 480px) {
+  /* Contact menjadi 1 kolom penuh */
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+ 
+  .profile-img {
+    width  : 150px;
+    height : 150px;
+  }
+ 
+  .profile-img i {
+    font-size: 90px;
+  }
+}
