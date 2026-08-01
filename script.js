@@ -174,5 +174,31 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('language', currentLang);
     applyLanguage(currentLang);
   });
+
+  /* 5. HIGHLIGHT NAVBAR SAAT SCROLL (CUSTOM SCROLLSPY) */
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      // Angka 120 adalah jarak kompensasi (offset) dari tinggi navbar
+      if (window.scrollY >= sectionTop - 120) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach((link) => {
+      // Hapus warna biru dari semua menu
+      link.classList.remove('active');
+      
+      // Tambahkan warna biru hanya pada menu yang sedang dilewati layar
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
  
 });
